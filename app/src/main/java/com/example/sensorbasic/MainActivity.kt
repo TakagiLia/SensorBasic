@@ -19,9 +19,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //加速センサーを取得
         manager  = getSystemService(SENSOR_SERVICE) as SensorManager
         list = manager.getSensorList(Sensor.TYPE_ACCELEROMETER)
 
+        //センサー情報が変化した時の処理の実装
         listener = object : SensorEventListener{
             override fun onSensorChanged(event: SensorEvent) {
                 Toast.makeText(
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-
+        //SensorManagerからリスナーを削除
         manager.unregisterListener(listener,list[0])
     }
 }
