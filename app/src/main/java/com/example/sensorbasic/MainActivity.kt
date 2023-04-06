@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var listener: SensorEventListener
     private lateinit var list: List<Sensor>
 
-
+    //onCreate ブランチきる
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
