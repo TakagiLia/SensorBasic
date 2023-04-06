@@ -10,6 +10,7 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
+    //変数宣言
     private lateinit var  manager: SensorManager
     private lateinit var listener: SensorEventListener
     private lateinit var list: List<Sensor>
